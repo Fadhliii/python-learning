@@ -1,25 +1,23 @@
 import random
+import string
 
-pilihan = ["gunting", "batu", "kertas"]
-bot = random.choice(pilihan)
+letters = list(string.ascii_lowercase)
+n_letters = int(input("choose jumlah letter : \n"))
 
-user = input("your choice: ").lower()
+numbers = list(string.digits)
+n_numbers = int(input("choose jumlah nomor  : "))
 
-if user not in pilihan:
-    print("invalid input")
-    exit()
+symbols = list(string.punctuation)
+n_symbols = int(input("choose jumlah simbol : "))
 
-if user == bot:
-    result = "draw"
-elif user == "batu" and bot == "kertas":
-    result = "lose"
-elif user == "gunting" and bot == "batu":
-    result = "lose"
-elif user == "kertas" and bot == "gunting":
-    result = "lose"
-else:
-    result = "win"
-
-print("user:", user)
-print("bot :", bot)
-print("result:", result)
+pw = ""
+for char in range(0, n_letters):
+    pw += random.choice(letters)
+    
+for char in range(0, n_numbers):
+    pw += random.choice(numbers)
+    
+for char in range(0, n_symbols):
+    pw += random.choice(symbols)
+    
+print(pw)
