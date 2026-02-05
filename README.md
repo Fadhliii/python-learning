@@ -1,5 +1,5 @@
-# Day 5 - Learning Python
-# Project: Jankenpo (Rock-Paper-Scissors)
+#### Day 5 - Learning Python
+#### Project: Jankenpo (Rock-Paper-Scissors)
 
 """
 What I learned today:
