@@ -9,4 +9,6 @@ What I learned today:
   - It take the 1st value in the 1st iteration
   - Then the next value in the next iteration
   - Until the last value in the final iteration
+- adding append function to make a random to be a list
+- change a list that has been shuffled to be string
 """
