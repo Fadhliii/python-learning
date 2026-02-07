@@ -1,4 +1,4 @@
-#### Day 5 - Learning Python
+#### Day 4 - Learning Python
 #### Project: Jankenpo (Rock-Paper-Scissors)
 
 """
@@ -12,3 +12,19 @@ What I learned today:
 - adding append function to make a random to be a list
 - change a list that has been shuffled to be string
 """
+#### Day 5 
+#### Project: random password generator
+
+"""
+What I learned today:
+- How to use list, in range
+- how to change list to normal string and et cetera
+- shuffling the list
+"""
+
+#### Day 6
+#### Project: jankenpo using while
+
+
+
+
