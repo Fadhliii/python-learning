@@ -1,28 +1,38 @@
 import random
-import string
 
-letters = list(string.ascii_lowercase)
-n_letters = int(input("choose jumlah letter : \n"))
+pilihan = ["batu", "gunting", "kertas"]
 
-numbers = list(string.digits)
-n_numbers = int(input("choose jumlah nomor  : "))
+print("🔥=== GAME SUIT  ===🔥")
+print("Pilih: batu ✊ | gunting ✌️ | kertas ✋")
+outgame = "Ketik 'exit' kalau udah bosen main\n"
 
-symbols = list(string.punctuation)
-n_symbols = int(input("choose jumlah simbol : "))
-
-pw = []
-for char in range(0, n_letters):
-    pw.append(random.choice(letters))
+while True:
+    user = input("Pilihan : ").lower().strip()
+    bot = random.choice(pilihan).lower()
+    print("┌" + "─" * 20 + "┐")
+    print("|"f"User pilih : {user}")
+    print("|"f"Bot pilih : {bot}")
+    print("└" + "─" * 20 + "┘")
+    # user exit 
+    if user == "exit":
+        print("\nMakasih udah main bareng! 👋✨ Sampai ketemu lagi ya~")
+        break
+    #user invalid input
+    if user not in pilihan:
+        print("Inputnya salah tuh. ulangi lagi ya TQ")
+        continue
+    #user in match
+    #input user
+    if user == bot:
+        print("wah seri nih matchnya 🔥")
+    elif (user == "gunting" and bot == "kertas") or \
+        (user == "batu" and bot == "gunting") or \
+        (user == "kertas" and bot == "batu"):
+        print("🏆🏆 yeay menang !🏆🏆")
+    else:
+        print(" 💔💔 kurang bentung, coba lagi deh 💔💔 ")        
+        
+    print(outgame)
     
-for char in range(0, n_numbers):
-    pw.append(random.choice(numbers))
     
-for char in range(0, n_symbols):
-    pw.append(random.choice(symbols))
-    
-print(pw)
-random.shuffle(pw)
-print(pw) #shuffling result
-
-final_password = ''.join(pw)
-print(final_password)
+print()
